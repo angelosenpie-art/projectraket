@@ -1,15 +1,15 @@
 <template>
     <div class="relative bg-gradient-to-t">
-        <div class="max-w-7xl mx-auto bg-white px-4 sm:px-6">
-            <div class="flex justify-between items-center border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10">
+        <div class="max-w-7xl mx-auto bg-white pb-2 pt-2 px-4 sm:px-6">
+            <div class="flex justify-between items-center border-gray-100 py-1 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <div>
                     <jet-application-logo class="block h-12 w-auto" />
                 </div>
-                <div class="pl-8 col-span-3 rounded-none sm:col-span-2">
+                <div class="pl-8 bordercol-span-3 rounded-none sm:col-span-2">
                     <div class="mt-1 flex rounded-none shadow-sm">
-                    <input type="text" name="company_website" id="company_website" class="inline-flex rounded-none items-center px-3 border-gray-300 bg-gray-50 text-gray-500 text-md" placeholder="Find Services.." />
-                    <inertia-link href="#"  class="font-bold pl--1 whitespace-nowrap block items-center justify-center px-4 py-2 border border-transparent shadow-sm text-lg text-white bg-green-600 hover:bg-green-700">
+                    <input type="text" name="company_website" id="company_website" class="inline-flex rounded-none pl-10 items-center px-3 border-gray-300 bg-gray-50 text-gray-500 text-md" placeholder="Find Services.." />
+                    <inertia-link href="#"  class="font-bold whitespace-nowrap block items-center  px-4 py-2 border border-transparent shadow-sm text-lg text-white bg-green-600 hover:bg-green-700">
                         Search
                     </inertia-link>
                     </div>
