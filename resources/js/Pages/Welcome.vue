@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="relative bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="relative bg-gradient-to-t">
+            <div class="max-w-7xl mx-auto bg-white px-4 sm:px-6">
                 <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <div>
@@ -20,99 +20,92 @@
                     </svg>
                     </button>
                 </div>
-                <nav class="hidden md:flex space-x-10">
-                    <div class="relative">
-                    <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-                    <a href="#" class="text-base font-large font-bold text-gray-700 hover:text-gray-900">
-                    How it works
-                    </a>
 
-                    <!--
-                        'Solutions' flyout menu, show/hide based on flyout menu state.
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <inertia-link href="#" class="text-xl pr-5 font-bold text-gray-700 hover:text-gray-900">
+                        How it works
+                    </inertia-link>
 
-                        Entering: "transition ease-out duration-200"
-                        From: "opacity-0 translate-y-1"
-                        To: "opacity-100 translate-y-0"
-                        Leaving: "transition ease-in duration-150"
-                        From: "opacity-100 translate-y-0"
-                        To: "opacity-0 translate-y-1"
-                    -->
-                    </div>
+                    <inertia-link href="#" class="text-xl pr-5 font-bold text-gray-700 hover:text-gray-900">
+                        Become a Seller
+                    </inertia-link>
 
-                    <a href="#" class="text-base font-large font-bold text-gray-700 hover:text-gray-900">
-                    Become a Seller
-                    </a>
+                    <inertia-link v-if="$page.props.user" href="/dashboard" class="ml-8 font-bold whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-xl text-white bg-black hover:bg-yellow-500">
+                        Dashboard
+                    </inertia-link>
 
-                    <!-- <div class="relative">
-                        Item active: "text-gray-900", Item inactive: "text-gray-500"
-                        <button type="button" class="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span>More</span>
-                        Heroicon name: chevron-down
-
-                        Item active: "text-gray-600", Item inactive: "text-gray-400"
-                        -->
-                        <!-- <svg class="ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </button> -->
-
-                    <!--
-                        'More' flyout menu, show/hide based on flyout menu state.
-
-                        Entering: "transition ease-out duration-200"
-                        From: "opacity-0 translate-y-1"
-                        To: "opacity-100 translate-y-0"
-                        Leaving: "transition ease-in duration-150"
-                        From: "opacity-100 translate-y-0"
-                        To: "opacity-0 translate-y-1"
-
-                    </div> -->
-                </nav>
-                    <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <inertia-link v-if="$page.props.user" href="/dashboard" class="ml-8 font-bold whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-black hover:bg-yellow-500">
-                            Dashboard
+                    <template v-else>
+                        <inertia-link :href="route('login')" class="whitespace-nowrap font-bold text-xl text-gray-700 hover:text-white">
+                            Login
                         </inertia-link>
 
-                        <template v-else>
-                            <inertia-link :href="route('login')" class="whitespace-nowrap font-bold text-base font-large text-gray-700 hover:text-gray-900">
-                                Login
-                            </inertia-link>
-                            <inertia-link v-if="canRegister" :href="route('register')" class="ml-8 font-bold whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base text-white bg-black hover:bg-gray-700">
-                                Register
-                            </inertia-link>
-                        </template>
-                    </div>
+                        <inertia-link v-if="canRegister" :href="route('register')" class="ml-8 font-bold whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-xl text-white bg-green-600 hover:bg-green-700">
+                            Register
+                        </inertia-link>
+                    </template>
+                </div>
                 </div>
             </div>
-            <!--
-                Mobile menu, show/hide based on mobile menu state.
-                Entering: "duration-200 ease-out"
-                From: "opacity-0 scale-95"
-                To: "opacity-100 scale-100"
-                Leaving: "duration-100 ease-in"
-                From: "opacity-100 scale-100"
-                To: "opacity-0 scale-95"
-            -->
-            <section class="hero">
-                <div class="hero-body">
-                    <div class="container-visitor">
-                        <h1 class="title font-bold"> {{ heading }}</h1>
+            <nav class="second-menu-bar py-2 border-b-2 border-t-2 border-gray-300 bg-gray-200">
+                <ul class="pl-12 md:flex md:flex items-center md:flex-1">
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-white text-gray-700">Graphics & Design</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Video & Animation</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Music & Audio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Programming & Tech</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Entertainment Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Build & Craft Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="subpixel-antialiased font-bold pr-6 hover:text-gray-900 text-gray-700">Skill & Art Services</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="mt-10 mx-auto max-w-full px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                <div class="lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block xl:inline">Find Your Filipino</span>
+                        <span class="block text-green-700 xl:inline">Freelancer</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                    </p>
+                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                        <div class="rounded-md shadow">
+                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10">
+                            Get started
+                        </a>
+                        </div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3">
+                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                            Live demo
+                        </a>
+                        </div>
                     </div>
                 </div>
-
-            </section>
+            </main>
         </div>
     </div>
 </template>
 
 <style scoped>
     .bg-gray-100 {
-        background-color: #f7fafc;
+        background-color: #ececec;
         background-color: rgba(247, 250, 252, var(--tw-bg-opacity));
     }
 
     .border-gray-200 {
-        border-color: #edf2f7;
+        border-color: #eef1f5f8;
         border-color: rgba(237, 242, 247, var(--tw-border-opacity));
     }
 
