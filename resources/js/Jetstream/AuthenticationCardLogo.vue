@@ -1,8 +1,15 @@
-<template>
-    <inertia-link :href="'/'">
-        <svg class="w-16 h-16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z" fill="#6875F5"/>
-            <path d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z" fill="#6875F5"/>
-        </svg>
-    </inertia-link>
+<template>	
+	<inertia-link :href="'/'">
+		<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+		<svg class="w-16 h-16" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="50px" y="50px"
+			viewBox="0 0 1280 1280" style="enable-background:new 0 0 1280 1280;" xml:space="preserve">
+		<path d="M979,431H364c-83.95,0-152-68.05-152-152v0h767V431z"/>
+		<polygon points="523,279 523,619.43 364,726.23 364,279 "/>
+		<polygon points="364,791.38 522,684.58 522,966 364,966 "/>
+		<polygon points="980,279 980,544.27 904.87,597 828,597 828,279 "/>
+		<polygon points="980,358.57 980,544.27 904.87,597 828.63,650.51 704.2,737.84 451.76,915.02 364.44,790.61 618.96,611.97 
+			743.39,524.64 828,465.25 "/>
+		<polygon points="975.98,965 817.41,965 796.38,813 757,528.48 912.81,508.57 954.94,813 "/>
+		</svg>
+	</inertia-link>
 </template>
