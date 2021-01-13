@@ -17,9 +17,15 @@
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                                <div class="mt-1 flex py-3 rounded-none shadow-sm">
+                                    <input type="text" name="company_website" id="company_website" class="inline-flex rounded-none items-center px-3 border-gray-300 bg-gray-50 text-gray-500 text-md" placeholder="Find Services.." />
+                                    <inertia-link href="#"  class="font-bold pl--1 whitespace-nowrap block items-center justify-center px-4 py-1 border border-transparent shadow-sm text-lg text-white bg-green-600 hover:bg-green-700">
+                                        Search
+                                    </inertia-link>
+                                </div>
+                                <!-- <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
-                                </jet-nav-link>
+                                </jet-nav-link> -->
                             </div>
                         </div>
 
@@ -83,19 +89,27 @@
                             <div class="ml-3 relative">
                                 <jet-dropdown align="right" width="48">
                                     <template #trigger>
-                                        <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                                            <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
-                                        </button>
+                                        <div class="sm:flex">
+                                            <inertia-link href="#" class="text-green-700 block px-3 py-2 rounded-md text-lg font-bold">
+                                                How it works
+                                            </inertia-link>
 
-                                        <span v-else class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                                {{ $page.props.user.name }}
-
-                                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
+                                            <inertia-link href="#"  class="text-green-700 block px-3 py-2 rounded-md text-lg font-bold">
+                                                Become a Seller
+                                            </inertia-link>
+                                            <button v-if="$page.props.jetstream.managesProfilePhotos" class="pl-2 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                                <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
                                             </button>
-                                        </span>
+                                            <span v-else class="inline-flex rounded-md">
+                                                <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                                    {{ $page.props.user.name }}
+
+                                                    <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </button>
+                                            </span>
+                                        </div>
                                     </template>
 
                                     <template #content>
@@ -215,8 +229,8 @@
             </nav>
 
             <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="bg-black shadow">
+                <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:px-8">
                     <slot name="header"></slot>
                 </div>
             </header>
@@ -269,6 +283,6 @@
             logout() {
                 this.$inertia.post(route('logout'));
             },
-        }
+        },
     }
 </script>
