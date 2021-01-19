@@ -27,7 +27,11 @@ module.exports = {
             '125': '1.25',
             '150': '1.5',
            '200': '2',
-          }
+          },
+        backgroundImage: {
+            'hero-lg': "url('/pubic/images/raketbg.jpg')",
+            'hero-sm': "url('/storage/img/sys/sm-hero.jpg')",
+        },
     },
 
     variants: {
