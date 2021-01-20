@@ -1,8 +1,8 @@
 <template>
-    <div class="relative bg-gradient-to-t"
+    <div class="relative overflow-hidden"
         style="background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')"
     >
-        <div class="max-w-7xl mx-auto bg-white pb-2 pt-2 px-4 sm:px-6">
+        <div class=" bg-white pb-2 pt-2 sm:px-6">
             <div class="flex justify-between items-center border-gray-100 py-1 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
                 <div>
@@ -52,28 +52,22 @@
             </div>
             </div>
         </div>
-        <nav class="second-menu-bar py-2 border-gray-500 bg-black">
-            <ul class="pl-12 md:flex items-center md:flex-1">
+        <nav class="second-menu-bar display:block align-middle py-2 border-gray-500 bg-black">
+            <ul class="md:flex justify-center content-center inline-block align-middle md:flex-1">
                 <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Graphics & Design</a>
+                <a href="#" class="text-white hover:text-green-200 block px-5 py-1 pr-20 rounded-md text-base font-bold">Graphics & Design</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Video & Animation</a>
+                <a href="#" class="text-white hover:text-green-200 block px-5 py-1 pr-20 rounded-md text-base font-bold">Programming & Tech</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Music & Audio</a>
+                <a href="#" class="text-white hover:text-green-200 block px-5 py-1 pr-20 rounded-md text-base font-bold">Entertainment Services</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Programming & Tech</a>
+                <a href="#" class="text-white hover:text-green-200 block px-5 py-1 pr-20 rounded-md text-base font-bold">Build & Craft Services</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Entertainment Services</a>
-                </li>
-                <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Build & Craft Services</a>
-                </li>
-                <li>
-                    <a href="#" class="text-white hover:text-green-200 block px-3 py-1 rounded-md text- base font-bold">Skill & Art Services</a>
+                <a href="#" class="text-white hover:text-green-200 block px-5 py-1 rounded-md text-base font-bold">Skill & Art Services</a>
                 </li>
             </ul>
         </nav>

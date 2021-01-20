@@ -6,58 +6,11 @@
             <h2 class="mr-3 pl-2">Local Services</h2>
             <!-- SWITCH CONTAINER -->
             <div class="w-10 h-6 bg-gray-300 rounded-full flex-shrink-0 p-1" @click="toggleActive = !toggleActive">
-
                 <!-- SWITCH -->
                 <div class="bg-white w-4 h-4 rounded-full shadow-md transform translate-x-5 duration-300 ease-in-out" :class="{ 'translate-x-6': toggleActive,}">
-
-            </div>
+                </div>
             <!-- SWITCH CONTAINER END -->
-
-        </div>
-        <div class="flex w-full md:w-1/2 ">
-            <div class="mr-3 text-gray-700 font-medium">Local Services</div>
-            <!-- Toggle Button -->
-            <label 
-                for="local"
-                class="flex items-center cursor-pointer"
-            >
-                <!-- toggle -->
-                <div class="relative">
-                <!-- input -->
-                <input id="local" type="checkbox" class="hidden" />
-                <!-- line -->
-                <div
-                    class="toggle__line w-10 h-4 bg-gray-400 rounded-full shadow-inner"
-                ></div>
-                <!-- dot -->
-                <div
-                    class="toggle__dot absolute w-6 h-6 py-1 bg-white rounded-full shadow inset-y-0 left-0"
-                ></div>
-                </div>
-                <!-- label -->
-            </label>
-
-            <div class="mr-3 pl-2 text-gray-700 font-medium">Online Sellers</div>
-            <!-- Toggle Button -->
-            <label 
-                for="Online"
-                class="flex items-center cursor-pointer"
-            >
-                <!-- toggle -->
-                <div class="relative">
-                <!-- input -->
-                <input id="Online" type="checkbox" class="hidden" />
-                <!-- line -->
-                <div
-                    class="toggle__line w-10 h-4 bg-gray-400 rounded-full shadow-inner"
-                ></div>
-                <!-- dot -->
-                <div
-                    class="toggle__dot absolute w-6 h-6 bg-white rounded-full shadow inset-y-0 left-0"
-                ></div>
-                </div>
-                <!-- label -->
-            </label>
+            </div>
         </div>
 
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
@@ -653,7 +606,7 @@
                 </nav>
                 </div>
             </div>
-            </div>
+        </div>
     </div>
 </template>
 <style scoped>
